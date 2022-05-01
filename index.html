@@ -1,0 +1,248 @@
+<link href="https://fonts.googleapis.com/css2?family=Graduate&family=PT+Sans&family=Press+Start+2P&display=swap" rel="stylesheet">
+<style type="text/css"> 
+header {
+	width:100%; 
+	overflow:hidden; 
+	background-image: none;
+  background-color: rgb(80, 165, 150);
+	margin-bottom:20px;
+  line-height:130px;
+}
+.footer {
+	width:100%; 
+	overflow:hidden; 
+	background-image: none;
+  background-color: rgb(80, 165, 150);
+	margin-bottom:20px;
+  line-height:130px;
+}
+.wrapper {
+	width:90%; 
+	margin:auto; 
+	overflow:hidden; 
+}
+.title{
+  font-size: 50px;
+  margin-left: 50px;
+  margin-top: 65px;
+  font-family: 'Calibri';
+}
+.init_pargraph{
+  font-size: 20px;
+  margin-left: 60px;
+  margin-top: 40px;
+  font-family:'Arial';
+}
+.mark{
+  font-size: 30px;
+  margin-left: 60px;
+  margin-top: 100px;
+  font-family:'Arial';
+}
+.points{
+  font-size: 20px;
+  margin-left: 65px;
+  margin-top: 30px;
+  font-family:'Arial';
+}
+header .logo {
+	color:#f2f2f2;
+	font-size:61px;
+  margin-left: 70px;
+  margin-top: 30px;
+	float:left;
+}
+.footer .logo {
+	color:#f2f2f2;
+	font-size:61px;
+  margin-left: 70px;
+  margin-top: 30px;
+	float:left;
+}
+.fcoin {
+  width: 100px;
+  height: 100px;
+  margin-left: 10px;
+  margin-top: 47px;
+}
+.fcoin:hover{
+  cursor: pointer;
+  border-radius: 100px;
+  box-shadow: 0px 1px 5px 1px rgb(11, 215, 238);
+}
+.div_fcoin{
+  float: left;
+  display:inline-block;
+}
+header nav {
+	float:right;
+	line-height:70px;
+  margin-top: 0px;
+}
+.footer nav {
+	float:right;
+	line-height:70px;
+  margin-top: 0px;
+}
+.stellar.aboutus.posts{
+  display:inline-block;
+	color:rgb(255, 255, 255);
+	text-decoration:none;
+	padding:10px 20px;
+	line-height:normal;
+	font-size:22px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+.stellar.aboutus.posts:hover{
+  background:rgb(11, 215, 238);
+	border-radius:50px;
+}
+.franky{
+  width:250px; 
+  height:250px;
+  margin-left: 60px;
+  margin-top: 40px;
+}
+header nav a {
+	display:inline-block;
+	color:#fff;
+	text-decoration:none;
+	padding:10px 30px;
+  margin-top: 73px;
+	line-height:normal;
+	font-size:30px;
+	font-weight:bold;
+	-webkit-transition:all 500ms ease;
+	-o-transition:all 500ms ease;
+	transition:all 500ms ease;
+}
+
+header nav a:hover {
+	background:rgb(11, 215, 238);
+	border-radius:50px;
+}
+.Statistics{
+  font-size: 30px;
+  margin-left: 60px;
+  margin-top: 40px;
+  font-family:'Arial';
+  color:blue
+}
+.grouptelegram{
+  text-decoration:none;
+  font-size: 30px;
+  margin-left: 50px;
+  margin-top: 50px;
+  font-family: 'Calibri';
+  color:blue
+}
+.init_pargraph2{
+  font-size: 30px;
+  margin-left: 60px;
+  margin-top: 40px;
+  font-family:"Arial"
+}
+.principal{
+  width: 100%;
+  height: 400px;
+  background-color: rgb(55, 100, 156);
+}
+</style>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome To the Prorr2 Community</title>
+</head>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="https://prueba-aba6e.web.app/aspe.js"></script>
+<body style="background-color:white;margin:0px;padding:0px;">
+  <header id="header">
+    <div class="wrapper" id="cabeza">
+      <div class="div_fcoin">
+      <img  class="fcoin" src="https://Prorr2.com/web/web/fotos/Fcoin.png" id="imagen">
+    </div>
+      <div class="logo" id="logo">Prorr2 Community</div>
+        <nav>
+            <a href="Stellar" class="stellar" id="stellar">Stellar</a>
+            <a href="AboutUs" class="aboutus" id="aboutus">About us</a>
+            <a href="Posts" class="posts" id="posts">Posts</a>
+        </nav>
+    </div>
+</header>
+<h1 class="title">Welcome to Prorr2</h1>
+<div class="principal">
+
+</div>
+</body>
+<script type="text/javascript">
+  var persons = 0;
+  fetch("https://prorr2.com/estadisticas/trafico", {
+      "method": "GET",
+      "mode": "cors",
+      "credentials": "include"
+    }).then(hey => result = hey.json()).then(
+    function(json){
+     result =  json;
+     document.getElementById("Statistics").innerText = result + " people have visited the website since it was launched."
+
+    });
+  var elemen = document.getElementById("stellar");
+  elemen.addEventListener("mouseover", function(e){
+    estapulsando = true;
+		document.getElementById("cabeza").style.backgroundImage="url('https://prorr2.com/web/web/fotos/stellar.png')";
+	});
+  var elemen2 = document.getElementById("aboutus");
+  elemen2.addEventListener("mouseover", function(e){
+    estapulsando = true;
+		document.getElementById("cabeza").style.backgroundImage="url('https://prorr2.com/web/web/fotos/sky.png')";
+	});
+  var elemen3 = document.getElementById("posts");
+  elemen3.addEventListener("mouseover", function(e){
+    estapulsando = true;
+		document.getElementById("cabeza").style.backgroundImage="url('https://prorr2.com/web/web/fotos/issues.png')";
+	});
+  setInterval(function() {
+    let zoom = (( window.outerWidth - 10 ) / window.innerWidth) * 100;//normal zoom -> 100, minime zoom -> 80, mobile zoom -> 415
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  if (/android/i.test(userAgent)) {
+    zoom = 250;
+  } 
+    var cal = 6100 / zoom;
+    document.getElementById("logo").style = "font-size:" + cal + "px;"
+    cal = 13000 / zoom;
+    document.getElementById("header").style = "line-height:" + cal + "px;"
+     cal = 2500 / zoom;
+    document.getElementById("stellar").style = "font-size:" + cal + "px"
+    document.getElementById("aboutus").style = "font-size:" + cal + "px"
+    document.getElementById("posts").style = "font-size:" + cal + "px"
+     cal = 10000 / zoom;
+    document.getElementById("imagen").style = "width:" + cal + "px;" + "height:" + cal + "px";
+    var estapulsando = false;
+  elemen.addEventListener("mouseover", function(e){
+    estapulsando = true;
+		document.getElementById("cabeza").style.backgroundImage="url('https://prorr2.com/web/web/fotos/stellar.png')";
+	});
+  var elemen2 = document.getElementById("aboutus");
+  elemen2.addEventListener("mouseover", function(e){
+    estapulsando = true;
+		document.getElementById("cabeza").style.backgroundImage="url('https://prorr2.com/web/web/fotos/sky.png')";
+	});
+  var elemen3 = document.getElementById("posts");
+  elemen3.addEventListener("mouseover", function(e){
+    estapulsando = true;
+		document.getElementById("cabeza").style.backgroundImage="url('https://prorr2.com/web/web/fotos/issues.png')";
+	});
+  if(!estapulsando){
+    document.getElementById("cabeza").style.backgroundImage="url('https://null')";
+  }
+  }, 1000);
+</script>
+</html>
